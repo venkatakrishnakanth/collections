@@ -26,8 +26,8 @@ public class TimeComparisonForArrayListandLinkedList {
 		
 		//time taken to insert thousand elements into arraylist.
 		long StartTime = System.nanoTime()/1000;
-		for(int i=0;i<1000;i++)
-			al.add(i);
+		for(int i=0;i<10000;i++)
+			al.add((int)Math.random());
 		long EndTime = System.nanoTime()/1000;
 		long ExecTime= EndTime-StartTime;
 		System.out.println("TIme taken to insert thousand elements into arrayList is: "+ ExecTime);
@@ -35,8 +35,8 @@ public class TimeComparisonForArrayListandLinkedList {
 		
 		// time taken to insert thousand elements into LinkedList
 		long StartTime1 = System.nanoTime()/1000;
-		for(int i=0;i<1000;i++)
-			ll.add(i);
+		for(int i=0;i<10000;i++)
+			ll.add((int)Math.random());
 		long EndTime1 = System.nanoTime()/1000;
 		long ExecTime1= EndTime1-StartTime1;
 		System.out.println("TIme taken to insert thousand elements into LInkedList is: "+ ExecTime1);
@@ -44,7 +44,7 @@ public class TimeComparisonForArrayListandLinkedList {
 		
 		//time taken to insert element into middle of existing ArrayList.
 		long StartTime2 = System.nanoTime()/1000;
-		al.add(500, 101613);
+		al.add(200, 101613);
 		long EndTime2 = System.nanoTime()/1000;
 		long ExecTime2= EndTime2-StartTime2;
 		System.out.println("TIme taken to insert element into middle of Arraylist is: "+ ExecTime2);
@@ -52,7 +52,7 @@ public class TimeComparisonForArrayListandLinkedList {
 		
 		//time taken to insert an element into middle of existing LinkedList
 		long StartTime3 = System.nanoTime()/1000;
-		ll.add(500, 101613);
+		ll.add(2000, 101613);
 		long EndTime3 = System.nanoTime()/1000;
 		long ExecTime3= EndTime3-StartTime3;
 		System.out.println("TIme taken to insert element into middle of LinkedList is: "+ ExecTime3);
@@ -80,14 +80,13 @@ public class TimeComparisonForArrayListandLinkedList {
 		}else{
 			long EndTim5=System.nanoTime()/1000;
 			long ExecTim5= EndTim5-StartTime5;
-			System.out.println("Element not found. time taken to search complete arraylist is "+ ExecTim5);
+			System.out.println("Element not found. time taken to search complete linkedlist is "+ ExecTim5);
 		}
 		
 		
 		//time taken to remove an element from ArrayList
 		long StartTime6 = System.nanoTime()/1000;
-		int rmv =500;
-		al.remove(rmv);
+		al.remove(Integer.valueOf(500));
 		long EndTime6 = System.nanoTime()/1000;
 		long ExecTime6 = EndTime6-StartTime6;
 		System.out.println("Time taken to delete an element from ArrayList is: "+ExecTime6);
@@ -96,7 +95,7 @@ public class TimeComparisonForArrayListandLinkedList {
 		//time taken to remove an element from LinkedList
 		long StartTime7 = System.nanoTime()/1000;
 		int rmv1 =500;
-		ll.remove(rmv1);
+		ll.remove(500);
 		long EndTime7 = System.nanoTime()/1000;
 		long ExecTime7 = EndTime7-StartTime7;
 		System.out.println("Time taken to delete an element from LinkedList is: "+ExecTime7);
